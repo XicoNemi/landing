@@ -1,67 +1,68 @@
-# Astro Idol
+# XicoNemi
 
-Landing page template for mirco SaaS products
+Landing page y panel de administración para comercios dentro de la app XicoNemi.
 
-### Live demo
-(https://idol.indiebold.com/)
+## 🌐 Sitio Web
 
-### Upgrade to Astrodol Pro version
-(https://idolpro.indiebold.com/)
+[Próximamente]
 
+## 🚀 Estructura del Proyecto
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+Dentro del proyecto de XicoNemi, encontrarás la siguiente estructura de carpetas y archivos:
 
 ```
 /
 ├── public/
 │   └── favicon.svg
 ├── src/
-    ├── assets/
 │   ├── components/
-│   │   └── Brief.astro
-        └── Customer.astro
-        └── Footer.astro
-        └── Header.astro
-        └── Hero.astro
-        └── Pricing.astro
+│   │   ├── Brief.astro
+│   │   ├── Customers.astro
+│   │   ├── Footer.astro
+│   │   ├── Header.astro
+│   │   ├── Hero.astro
+│   │   ├── Loader.astro
+│   │   ├── Pricing.astro
 │   ├── layouts/
 │   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── pages/
+│   │   ├── 404.astro
+│   │   ├── about.astro
+│   │   ├── index.astro
+│   │   ├── login.astro
+│   │   ├── sign.astro
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Los archivos `.astro` dentro de `src/pages/` representan las diferentes páginas del sitio web.
 
-Any static assets, like images, can be placed in the `public/` directory.
+Los activos estáticos, como imágenes, se colocan en el directorio `public/`.
 
-## Preview
-![basics](./src/demo/idol-thumbnail.png)
+## 💡 Funcionalidades Principales
 
+- Página de inicio con información de la app y enlaces de descarga.
+- Sección "Sobre Nosotros" con detalles de XicoNemi.
+- Página de características destacadas de la plataforma.
+- Formulario de contacto para consultas y soporte.
+- Sistema de inicio de sesión para clientes de comercios.
 
-## 🧞 Commands
+## 🛠 Comandos Disponibles
 
-All commands are run from the root of the project, from a terminal:
+Ejecuta estos comandos desde la raíz del proyecto:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Comando              | Acción                                         |
+|----------------------|-----------------------------------------------|
+| `npm install`       | Instala las dependencias del proyecto        |
+| `npm run dev`       | Inicia el servidor de desarrollo en `localhost:3000` |
+| `npm run build`     | Genera los archivos para producción en `./dist/` |
+| `npm run preview`   | Previsualiza la versión de producción localmente |
 
+## 📌 Próximamente
 
+- Integración con el sistema de administración de comercios.
+- Sección de opiniones de clientes.
+- Nuevas funcionalidades y mejoras de UI/UX.
 
+---
 
-
-
-## 👀 Curious to Explore More?
-
-Check out [LAB-CH3](https://github.com/LaB-CH3) for a growing collection of current and future templates.
-
-If you’ve found this helpful, consider fueling my creativity!  
-[![Buy me a coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/d2OuR1c)
+Desarrollado con ❤️ por el equipo de XicoNemi 🚀
