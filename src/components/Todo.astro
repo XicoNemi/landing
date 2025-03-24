@@ -1,0 +1,95 @@
+---
+// No es necesario código en la sección del bloque de Astro en este caso.
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <style>
+      /* Estilos básicos */
+      .todo-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+      }
+      .todo-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .todo-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      .todo-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      .todo-item button {
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="todo-container">
+      <h2>Lista de Tareas</h2>
+      <input
+        type="text"
+        id="todo-input"
+        class="todo-input"
+        placeholder="Agrega una tarea"
+      />
+      <ul id="todo-list" class="todo-list"></ul>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const inputField = document.getElementById('todo-input');
+        const todoList = document.getElementById('todo-list');
+
+        // Función para agregar una tarea
+        function addTask() {
+          if (inputField.value.trim() !== '') {
+            const newTask = document.createElement('li');
+            newTask.classList.add('todo-item');
+            newTask.innerHTML = `
+              <span>${inputField.value}</span>
+              <button class="delete-btn">X</button>
+            `;
+            todoList.appendChild(newTask);
+            inputField.value = ''; // Limpiar el campo de entrada
+            // Agregar el evento de eliminar
+            const deleteButton = newTask.querySelector('.delete-btn');
+            deleteButton.addEventListener('click', function () {
+              todoList.removeChild(newTask);
+            });
+          }
+        }
+
+        // Agregar tarea cuando se presiona Enter
+        inputField.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') {
+            addTask();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
